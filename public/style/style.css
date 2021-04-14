@@ -49,11 +49,6 @@
 
 body {
     margin: 0 auto;
-    background-image: url(../img/fox-sky-4k-if-2560x1440.jpg);
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
 }
 
 .col-1 {
@@ -195,7 +190,6 @@ body {
 }
 
 .processo-inicial {
-    background-color: aquamarine;
     display: inline-table;
 }
 
@@ -229,6 +223,10 @@ li {
     text-transform: uppercase;
     color: #FFFFFF;
     letter-spacing: 1px;
+}
+
+li:hover {
+    color: #F28800;
 }
 
 .menu-bar {
@@ -454,6 +452,7 @@ li {
 .projetos {
     background: #01ABEB;
     display: inline-block;
+    height: 890px;
 }
 
 .projetos-h1 {
@@ -467,17 +466,201 @@ li {
     padding-top: 60px;
 }
 
-.div-proj-1{
-    width: 35%;
+.div-proj-1 {
+    width: 800px;
     background: #FFFFFF;
-box-shadow: 0px 2px 4px rgba(50, 50, 50, 0.1);
-    padding: 60px;
-    margin-left: 200px;
+    box-shadow: 0px 2px 4px rgba(50, 50, 50, 0.6);
+    margin-left: 190px;
+    height: 830px;
 }
-.div-proj-2{
-    width: 35%;
+
+.div-proj-2 {
+    width: 800px;
     background: #FFFFFF;
-    box-shadow: 0px 2px 4px rgba(50, 50, 50, 0.1);
-    padding: 60px;
+    box-shadow: 0px 2px 4px rgba(50, 50, 50, 0.6);
     margin-left: 35px;
+    height: 830px;
+}
+
+.row-espaço-projetos {
+    height: 390px;
+    width: 100%;
+}
+
+.SOBRE {
+    background-color: black;
+    height: 937px;
+}
+
+.img-sobre {
+    background-image: url(../img/sobre.png);
+    background-repeat: no-repeat;
+    background-position: 30px;
+    background-size: 95% 90%;
+}
+
+.h1-sobre {
+    font-family: 'morganite';
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 72px;
+    text-transform: uppercase;
+    margin-top: 141px;
+    color: #FFFFFF;
+}
+
+.p-sobre {
+    font-family: 'roboto-regular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 33px;
+    width: 520px;
+    color: #FFFFFF;
+}
+
+.Formulario {
+    height: 937px;
+    background: #7EBFB2;
+}
+
+.h1-forms {
+    font-family: 'morganite';
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 72px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    width: 445px;
+}
+
+.p-forms {
+    font-family: 'roboto-regular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+    color: #FFFFFF;
+    width: 523px;
+}
+
+.nome {
+    background: #0a544555;
+    border-radius: 4px;
+    Width: 570px;
+    Height: 64px;
+    Top: 5588px;
+    Left: 735px;
+    margin-bottom: 30px;
+    margin-top: 80px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    padding-left: 30px;
+    border: 0;
+}
+
+.email {
+    background: #0a544555;
+    border-radius: 4px;
+    Width: 570px;
+    Height: 64px;
+    Top: 5588px;
+    Left: 735px;
+    margin-bottom: 30px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFFFFF;
+    line-height: 19px;
+    padding-left: 30px;
+    border: 0;
+}
+
+.telefone {
+    background: #0a544555;
+    border-radius: 4px;
+    Width: 570px;
+    Height: 64px;
+    Top: 5588px;
+    Left: 735px;
+    margin-bottom: 30px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    padding-left: 30px;
+    border: 0;
+}
+
+.mensagem {
+    background: #0a544555;
+    color: #FFFFFF;
+    border-radius: 4px;
+    Width: 570px;
+    Height: 172px;
+    Top: 5588px;
+    Left: 735px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    padding-bottom: 100px;
+    padding-left: 30px;
+    border: 0;
+}
+
+::-webkit-input-placeholder {
+    color: #FFFFFF;
+    font-family: "elementary"
+}
+
+:-moz-placeholder {
+    color: #FFFFFF;
+    font-family: "elementary"
+}
+
+::-moz-placeholder {
+    color: #FFFFFF;
+    font-family: "elementary"
+}
+
+:-ms-input-placeholder {
+    color: #FFFFFF;
+    font-family: "elementary"
+}
+
+/* .input::placeholder {
+    color: white;
+    font-family: "elementary";
+  }
+
+  .textarea::placeholder {
+    color: white;
+    font-family: "elementary";
+  } */
+
+
+
+.btn-submit {
+    background: #FFFFFF;
+    border-radius: 4px;
+    Width: 270px;
+    Height: 64px;
+    BORDER: 0;
+    margin-top: 25px;
+    margin-left: 300px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.form {
+    display: grid;
 }
