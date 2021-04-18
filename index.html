@@ -15,10 +15,10 @@
             <div class="row-1 menu">
                 <span class="Rains-Logo">rains</span>
                 <ul class="menu-bar">
-                    <li>PROCESSO</li>
-                    <li>PROJETOS</li>
-                    <li>SOBRE</li>
-                    <li class="lista-agendar">AGENDAR UMA CONVERSA</li>
+                    <a href="#Processo" class="link"><li>PROCESSO</li></a>
+                    <a href="#Projetos" class="link"><li>Projetos</li></a>
+                    <a href="#Sobre" class="link"><li>sobre</li></a>
+                    <a href="#Formulario" class="link"><li>agendar uma conversa</li></a>
                 </ul>
             </div>
 
@@ -37,7 +37,7 @@
         </div>
 
 
-        <div name="Processo" class="row-9 processo-inicial">
+        <div id="Processo" class="row-9 processo-inicial">
             <h1 class="processo-txt">NOSSO PROCESSO</h1>
             <div class="row-3 ajusteTam">
                 <div class="col-6">
@@ -114,7 +114,7 @@
                 </div>
             </div>
         </div>
-        <div name="Projetos" class="row-10 projetos">
+        <div id="Projetos" class="row-10 projetos">
             <div class="row-3">
                 <h1 class="projetos-h1">projetos</h1>
             </div>
@@ -125,7 +125,7 @@
             </div>
         </div>
         <div class="row-espaço-projetos"></div>
-        <div name="Sobre" class="row-10 SOBRE">
+        <div id="Sobre" class="row-10 SOBRE">
             <div class="col-6 img-sobre"></div>
             <div class="col-6">
                 <h1 class="h1-sobre">sobre</h1>
@@ -145,7 +145,7 @@
             </div>
 
         </div>
-        <div name="Formulario" class="row-10 Formulario">
+        <div id="Formulario" class="row-10 Formulario">
             <div class="col-6">
                 <h1 class="h1-forms">
                     Comece sua jornada para melhorar os negócios
@@ -157,11 +157,11 @@
                 </p>
             </div>
             <div class="col-6">
-                <form class="form" method="POST" action="/">
+                <form class="form" method="POST" action="/cadastros">
                     <input class="nome" name="nome" type="text" placeholder="Nome">
                     <input class="email" name="email" type="email" placeholder="E-mail">
                     <input class="telefone" name="telefone" type="tel" placeholder="Telefone">
-                    <input class="mensagem" name="mensagem" type="textarea" placeholder="Mesagem">
+                    <input class="mensagem" name="mensagem" type="textarea" placeholder="Mensagem">
                     <button class="btn-submit" type="submit">ENVIAR</button>
                 </form>
             </div>
