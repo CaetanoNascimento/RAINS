@@ -3,6 +3,7 @@ const app = express();
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cadastro = require("./model/cadastro");
+var nodemailer = require('nodemailer');
 require("dotenv/config");
 global.__basedir = __dirname;
 app.use(express.static(__dirname + '/public'));
@@ -15,6 +16,26 @@ app.get('/', (req, res) => {
 
     res.sendFile(__dirname + '/index.html')
 })
+
+var remetente = nodemailer.createTransport({
+
+host:"64.136.45.145",
+service:'64.136.45.145',
+port:'587',
+secure:true,
+auth:{
+    user:'juam.euzin@gmail.com',
+    pass:'mariaju12'
+}
+})
+
+var emailASerEnviado = {
+    from: req.body.email,
+    to: 'juam.euzin@gmail.com',
+    subject: 'Enviando Email com Node.js',
+    text: 'Estou te enviando este email com node.js',
+    };
+
 
 app.post("/cadastros", (req, res) => {
     cadastro.create({
