@@ -17,24 +17,6 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html')
 })
 
-var remetente = nodemailer.createTransport({
-
-host:"64.136.45.145",
-service:'64.136.45.145',
-port:'587',
-secure:true,
-auth:{
-    user:'juam.euzin@gmail.com',
-    pass:'mariaju12'
-}
-})
-
-var emailASerEnviado = {
-    from: req.body.email,
-    to: 'juam.euzin@gmail.com',
-    subject: 'Enviando Email com Node.js',
-    text: 'Estou te enviando este email com node.js',
-    };
 
 
 app.post("/cadastros", (req, res) => {
@@ -44,13 +26,43 @@ app.post("/cadastros", (req, res) => {
         telefone: req.body.telefone,
         mensagem: req.body.mensagem
     }).then(function () {
-        res.sendFile(__dirname +  '/index.html' );
-        
+        res.sendFile(__dirname + '/index.html');
+
     }).catch(function (erro) {
         res.send("erro" + erro)
     })
 
-});
-    mongoose.connect(process.env.CONEXAO2, { useNewUrlParser: true }, () => console.log("Aeeee conectou"));
 
-    app.listen(2021, function () { console.log("ativo") });
+    var remetente = nodemailer.createTransport({
+
+        host: "smtp.gmail.com",
+        service: 'smtp.gmail.com',
+        port: '465',
+        secure: true,
+        auth: {
+            user: 'juam.euzin@gmail.com',
+            pass: 'mariaju.12'
+        }
+    })
+
+    var emailASerEnviado = {
+        from: req.body.email,
+        to: 'juam.euzin@gmail.com',
+        subject: 'Enviando Email com Node.js',
+        text: 'Estou te enviando este email com node.js\n' + req.body.nome + "\n" +
+            req.body.email + " \n " +
+            req.body.telefone + "\n" +
+            req.body.mensagem
+    };
+
+    remetente.sendMail(emailASerEnviado, function (error) {
+        if (error) {
+            console.log(error);
+        } else {
+            console.log('Email enviado com sucesso.');
+        }
+    });
+});
+mongoose.connect(process.env.CONEXAO2, { useNewUrlParser: true }, () => console.log("Aeeee conectou"));
+
+app.listen(2021, function () { console.log("ativo") });

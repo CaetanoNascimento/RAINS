@@ -532,6 +532,8 @@ li:hover {
     text-transform: uppercase;
     color: #FFFFFF;
     width: 445px;
+    margin-left: 80px;
+    margin-top: 73px;
 }
 
 .p-forms {
@@ -542,6 +544,7 @@ li:hover {
     line-height: 30px;
     color: #FFFFFF;
     width: 523px;
+    margin-left: 80px;
 }
 
 .nome {
@@ -643,8 +646,6 @@ li:hover {
     font-family: "elementary";
   } */
 
-
-
 .btn-submit {
     background: #FFFFFF;
     border-radius: 4px;
@@ -665,6 +666,16 @@ li:hover {
     display: grid;
 }
 
-a{
+a {
     text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+    
+    .principal {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
 }
